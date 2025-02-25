@@ -6,4 +6,14 @@ public partial class PopUp : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private void OnPointerEntered(object sender, EventArgs e)
+{
+    ((Frame)sender).Opacity = 0.7;
+}
+
+private void OnPointerExited(object sender, EventArgs e)
+{
+    ((Frame)sender).Opacity = 1.0;
+}
 }

@@ -4,9 +4,7 @@
              x:Class="GymClock.MainPage">
 
     <StackLayout>
-        <!-- Ihr bestehender Inhalt -->
-
-        <!-- Button zum Öffnen der Popup-Seite -->
+        
         <Button Text="Open Popup" Clicked="PopUpButtonClicked" />
     </StackLayout>
 
