@@ -3,18 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GymClock.PopUp"
              Title="PopUp">
-    <Grid>
-        <Frame WidthRequest="600" HeightRequest="400" BackgroundColor="#000080" CornerRadius="5" 
-               BorderColor="Black" Padding="5">
-            <Frame.GestureRecognizers>
-                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited"/>
-            </Frame.GestureRecognizers>
-            <VerticalStackLayout>
-                <Label Text="Name: ..." TextColor="White" FontSize="50"/>
-                <Label Text="Alter: ..." TextColor="White" FontSize="50"/>
-                <Label Text="Beruf: ..." TextColor="White" FontSize="50"/>
-                <Label Text="Hobby: ..." TextColor="White" FontSize="50"/>
+    
+    <ScrollView>
+        <Grid Padding="30" ColumnSpacing="20" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" /> 
+                <ColumnDefinition Width="*" />   
+            </Grid.ColumnDefinitions>
+
+            
+            <Frame Grid.Row="0" Grid.Column="0" CornerRadius="100" BorderColor="Black" Padding="5" BackgroundColor="#E0E0E0">
+                <Image Source="konto.png" WidthRequest="180" HeightRequest="180" Aspect="AspectFill" />
+            </Frame>
+
+            
+            <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="15">
+                <Label Text="Name: Max Mustermann" FontSize="30" TextColor="Black" />
+                <Label Text="IBAN: DE12 3456 7890 1234 5678 90" FontSize="24" TextColor="Black" />
+                <Label Text="Bank: Musterbank AG" FontSize="24" TextColor="Black" />
+                <Label Text="Adresse: Musterstraße 1, 12345 Musterstadt" FontSize="24" TextColor="Black" />
+                <Label Text="Telefon: +49 123 456789" FontSize="24" TextColor="Black" />
             </VerticalStackLayout>
-        </Frame>
-    </Grid>
+        </Grid>
+    </ScrollView>
 </ContentPage>
