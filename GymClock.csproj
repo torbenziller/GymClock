@@ -66,6 +66,9 @@
 	  <MauiXaml Update="Components\Pages\MemberOverview.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Components\Pages\Settings.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="PopUp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

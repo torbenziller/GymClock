@@ -18,4 +18,9 @@
         ContentTemplate="{DataTemplate pages:MemberOverview}"
         Route="MemberOverview" />
 
+    <ShellContent
+        Title="Einstellungen"
+        ContentTemplate="{DataTemplate pages:Settings}"
+        Route="Settings" />
+
 </Shell>
