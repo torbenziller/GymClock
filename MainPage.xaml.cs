@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui.Controls;
+﻿using GymClock.Controller;
+using Microsoft.Maui.Controls;
 
 namespace GymClock
 {
@@ -11,8 +12,11 @@ namespace GymClock
 
         private async void PopUpButtonClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync(nameof(PopUp), true);
+            //Kümmert sich um das Öffnen des PopUps als wäre es eine Benarichtigung
+            await PopUpHandler.OpenPopUpInNewWindow();
         }
+
+        
     }
 
 }
