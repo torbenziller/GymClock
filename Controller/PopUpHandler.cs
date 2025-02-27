@@ -8,7 +8,7 @@ namespace GymClock.Controller
 {
     public static class PopUpHandler
     {
-        public static async Task OpenPopUpInNewWindow(int delay)
+        public static async Task OpenPopUpInNewWindow(int delay, bool delayonoff)
         {
             var popUpPage = new PopUp();
             var window = new Window(popUpPage)
@@ -29,9 +29,14 @@ namespace GymClock.Controller
             // Berechne den Verzögerungswert in Millisekunden
             int closeDelay = delay * 1000;
 
-            // Schließe das Fenster nach der angegebenen Verzögerung
-            await Task.Delay(closeDelay);
-            Application.Current.CloseWindow(window);
+
+            if (delayonoff == true)
+            {
+                // Schließe das Fenster nach der angegebenen Verzögerung
+                await Task.Delay(closeDelay);
+                Application.Current.CloseWindow(window);
+            }
+            
         }
     }
 }

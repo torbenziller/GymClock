@@ -20,6 +20,6 @@ public partial class NPopUp : ContentView
     private async void OnDetailsButtonClicked(object sender, EventArgs e)
     {
         // PopUp-Seite anzeigen
-        await PopUpHandler.OpenPopUpInNewWindow(4);
+        await PopUpHandler.OpenPopUpInNewWindow(4, false);
     }
 }
