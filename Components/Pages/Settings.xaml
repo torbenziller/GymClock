@@ -6,10 +6,7 @@
     <ScrollView>
         <VerticalStackLayout>
             <Switch HorizontalOptions="Center"></Switch>
-            <Grid>
-                <Label Grid.Row="0" Grid.Column="0">Wie viele Sekunden Soll das PopUp erscheinen</Label>
-                <Entry x:Name="entry" Grid.Row="0" Grid.Column="1" Placeholder="" WidthRequest="40" MaxLength="3"/>
-            </Grid>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
