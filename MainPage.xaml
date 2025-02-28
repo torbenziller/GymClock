@@ -2,13 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:gymClock="clr-namespace:GymClock"
-
              x:Class="GymClock.MainPage">
-
+    
     <StackLayout>
-        
-        <Button Text="Open Popup" Clicked="PopUpButtonClicked" />
-        <gymClock:NPopUp x:Name="popup" />
+        <Frame BackgroundColor="#6d6d6d" HeightRequest="70" WidthRequest="1400" VerticalOptions="Start" HorizontalOptions="Center" >
+            <HorizontalStackLayout>
+                <Label TextColor="Black" Text="Mitglieder im Studio" FontSize="20" />
+                <Label TextColor="LightGray" Text="400"  FontSize="20" />
+            </HorizontalStackLayout>
+        </Frame>
+
+        <StackLayout VerticalOptions="End" HorizontalOptions="End">
+            <Button WidthRequest="150" Text="Open Popup" Clicked="PopUpButtonClicked"/>
+            <gymClock:NPopUp x:Name="popup" />
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
