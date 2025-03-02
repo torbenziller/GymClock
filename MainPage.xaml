@@ -4,7 +4,7 @@
              xmlns:gymClock="clr-namespace:GymClock"
              x:Class="GymClock.MainPage">
     
-    <AbsoluteLayout>
+    <AbsoluteLayout VerticalOptions="Start" HorizontalOptions="Center">
         <ScrollView>
             <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                 
