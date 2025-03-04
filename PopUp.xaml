@@ -3,29 +3,56 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GymClock.PopUp"
              Title="PopUp">
-    
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+            <Setter Property="BackgroundColor">
+                <Setter.Value>
+                    <AppThemeBinding Light="#E0E0E0" Dark="#303030" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
     <ScrollView>
         <Grid Padding="30" ColumnSpacing="20" RowSpacing="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200" /> 
-                <ColumnDefinition Width="*" />   
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            
-            <Frame Grid.Row="0" Grid.Column="0" CornerRadius="100" BorderColor="Black" Padding="5" BackgroundColor="#E0E0E0">
+            <Frame Grid.Row="0" Grid.Column="0" CornerRadius="100" Padding="5">
                 <Image Source="konto.png" WidthRequest="180" HeightRequest="180" Aspect="AspectFill" />
             </Frame>
 
-            
             <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="15">
-                <Label Text="Name: Max Mustermann" FontSize="30" TextColor="Black" />
-                <Label Text="IBAN: DE12 3456 7890 1234 5678 90" FontSize="24" TextColor="Black" />
-                <Label Text="Bank: Musterbank AG" FontSize="24" TextColor="Black" />
-                <Label Text="Adresse: Musterstraße 1, 12345 Musterstadt" FontSize="24" TextColor="Black" />
-                <Label Text="Telefon: +49 123 456789" FontSize="24" TextColor="Black" />
+                <Label Text="Name:" FontSize="24" />
+                <Entry x:Name="NameEntry" Text="Max Mustermann" FontSize="24" />
+
+                <Label Text="IBAN:" FontSize="24" />
+                <Entry x:Name="IbanEntry" Text="DE12 3456 7890 1234 5678 90" FontSize="24" />
+
+                <Label Text="Bank:" FontSize="24" />
+                <Entry x:Name="BankEntry" Text="Musterbank AG" FontSize="24" />
+
+                <Label Text="Adresse:" FontSize="24" />
+                <Entry x:Name="AdresseEntry" Text="Musterstraße 1, 12345 Musterstadt" FontSize="24" />
+
+                <Label Text="Telefon:" FontSize="24" />
+                <Entry x:Name="TelefonEntry" Text="+49 123 456789" FontSize="24" Keyboard="Telephone" />
+
+                <Button Text="Speichern"  HorizontalOptions="Center" Margin="0,20,0,0" />
             </VerticalStackLayout>
         </Grid>
     </ScrollView>
