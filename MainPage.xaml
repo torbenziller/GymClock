@@ -4,8 +4,8 @@
              xmlns:gymClock="clr-namespace:GymClock"
              x:Class="GymClock.MainPage">
     
-    <AbsoluteLayout VerticalOptions="Start" HorizontalOptions="Center">
-        <ScrollView>
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
             <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                 
                 <Frame BackgroundColor="#38343c" HeightRequest="70" WidthRequest="1400" VerticalOptions="Center" HorizontalOptions="Center" >
@@ -25,7 +25,7 @@
             </StackLayout>
         </ScrollView>
         
-        <gymClock:NPopUp x:Name="popup" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" />
+        <gymClock:NPopUp x:Name="popup" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="1, 1, AutoSize, AutoSize" />
     </AbsoluteLayout>
 
 </ContentPage>

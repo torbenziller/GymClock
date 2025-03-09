@@ -13,8 +13,8 @@ namespace GymClock.Controller
             var popUpPage = new PopUp();
             var window = new Window(popUpPage)
             {
-                Width = 884,
-                Height = 430
+                Width = 1250,
+                Height = 850
             };
 
             var displayInfo = DeviceDisplay.MainDisplayInfo;
