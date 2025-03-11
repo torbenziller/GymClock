@@ -4,9 +4,9 @@
              x:Class="GymClock.Components.Pages.Settings"
              Title="Einstellungen">
     <ScrollView>
-        <VerticalStackLayout>
+        <HorizontalStackLayout>
             <Switch HorizontalOptions="Center"></Switch>
             
-        </VerticalStackLayout>
+        </HorizontalStackLayout>
     </ScrollView>
 </ContentPage>
