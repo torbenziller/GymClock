@@ -17,22 +17,37 @@ namespace GymClock.Components.Ribbon
         private VerticalStackLayout tabContent = new VerticalStackLayout
         {
             BackgroundColor = Colors.Black,
-            Padding = new Thickness(10),
-            Spacing = 10
+            Padding = new Thickness(5),
+            Spacing = 5
         };
 
         public RibbonBar()
         {
             // Menüleiste hier kann man au bissle was machen mit dem design
-            Children.Add(tabHeaders);
-            Children.Add(tabContent);
+            var frame = new Frame
+            {
+                Content = new VerticalStackLayout
+                {
+                    Children = { tabHeaders, tabContent }
+                },
+                CornerRadius = 10, // Ecken abrunden
+                BackgroundColor = Colors.Transparent,
+                BorderColor = Colors.LightGray,
+                Padding = 0,
+                HasShadow = false
+            };
+
+            Children.Add(frame);
             BackgroundColor = Colors.Transparent;
         }
 
         // fügt einen Tab hinzu
         public RibbonTab AddTab(string tabName)
         {
-            var tab = new RibbonTab(tabName);
+            var tab = new RibbonTab(tabName)
+            {
+                IsVisible = tabs.Count == 0 // Nur der erste Tab ist sichtbar
+            };
             tabs[tabName] = tab;
             tabContent.Children.Add(tab);
 
@@ -45,7 +60,8 @@ namespace GymClock.Components.Ribbon
                 Padding = new Thickness(10),
                 CornerRadius = 5,
                 BorderColor = Colors.Transparent,
-                BorderWidth = 1
+                BorderWidth = 1,
+                HeightRequest = 2,
             };
 
             // VisualStateManager für Hover-Effekt

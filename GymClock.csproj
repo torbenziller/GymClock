@@ -89,6 +89,9 @@
 	  <MauiXaml Update="Components\Elements\NotificationPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Components\Pages\Login.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Components\Pages\MemberOverview.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
