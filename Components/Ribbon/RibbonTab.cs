@@ -13,7 +13,7 @@ namespace GymClock.Components.Ribbon
         public RibbonTab(string title)
         {
             Title = title;
-            BackgroundColor = Colors.SlateGrey;
+            BackgroundColor = Colors.Transparent;
         }
     }
 }

@@ -9,9 +9,9 @@ namespace GymClock.Components.Ribbon
         {
             Spacing = 20;
             Padding = new Thickness(10);
-            BackgroundColor = Colors.SlateGrey;
+            BackgroundColor = Colors.Transparent;
             // das hier ist eine trennlinie zwischen den Gruppen hab ich jetzt mal so gemacht
-            Children.Add(new BoxView { HeightRequest = 2, BackgroundColor = Colors.Pink });
+            Children.Add(new BoxView { HeightRequest = 20, BackgroundColor = Colors.Pink });
         }
 
         public void AddButton(RibbonButton button)
