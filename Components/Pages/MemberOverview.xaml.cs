@@ -10,11 +10,12 @@ public partial class MemberOverview : ContentPage
 		InitializeComponent();
         InitializeRibbonBar();
     }
+    /*--Ribbonbar Belegung--*/
     private void InitializeRibbonBar()
     {
         var tab1 = ribbonBar.AddTab("Datei");
         var group1 = new RibbonGroup();
-        group1.AddButton(new RibbonButton("Speichern", "save.png", () => { /* Speichern-Logik */ }));
+        group1.AddButton(new RibbonButton("Speichern", "save.png", () => { RibbonMemberOverviewSave(); }));
         group1.AddButton(new RibbonButton("Öffnen", "open.png", () => { /* Öffnen-Logik */ }));
         ribbonBar.AddGroup("Datei", group1);
 
@@ -23,5 +24,21 @@ public partial class MemberOverview : ContentPage
         group2.AddButton(new RibbonButton("Kopieren", "copy.png", () => { /* Kopieren-Logik */ }));
         group2.AddButton(new RibbonButton("Einfügen", "paste.png", () => { /* Einfügen-Logik */ }));
         ribbonBar.AddGroup("Bearbeiten", group2);
+    }
+
+    /*--Ribbon Aktion--*/
+    // Hier werden die Buttons der RibbonBar mit Funktionalität belegt
+    private void RibbonMemberOverviewSave()
+    {
+
+    }
+
+    private void RibbonMemberOverviewOpen()
+    {
+
+    }
+    private void RibbonMemberOverviewCopy()
+    {
+
     }
 }
