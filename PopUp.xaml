@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ribbon="clr-namespace:GymClock.Components.Ribbon"
              x:Class="GymClock.PopUp"
              Title="PopUp">
 
@@ -16,44 +17,50 @@
             <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
             <Setter Property="BackgroundColor">
                 <Setter.Value>
-                    <AppThemeBinding Light="#E0E0E0" Dark="#303030" />
+                    <AppThemeBinding Light="#E0E0E0" Dark="#303030"/>
                 </Setter.Value>
             </Setter>
         </Style>
     </ContentPage.Resources>
 
-    <ScrollView>
-        <Grid Padding="30" ColumnSpacing="20" RowSpacing="20">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+    <VerticalStackLayout>
+        <ribbon:RibbonBar x:Name="ribbonBar" />
 
-            <Frame Grid.Row="0" Grid.Column="0" CornerRadius="100" Padding="5">
-                <Image Source="konto.png" WidthRequest="180" HeightRequest="180" Aspect="AspectFill" />
-            </Frame>
+        <ScrollView>
+            <Grid Padding="30" ColumnSpacing="20" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-            <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="15">
-                <Label Text="Name:" FontSize="24" />
-                <Entry x:Name="NameEntry" Text="Max Mustermann" FontSize="24" />
+                <Frame Grid.Row="0" Grid.Column="0" CornerRadius="100" Padding="5">
+                    <Image Source="konto.png" WidthRequest="180" HeightRequest="180" Aspect="AspectFill" />
+                </Frame>
 
-                <Label Text="IBAN:" FontSize="24" />
-                <Entry x:Name="IbanEntry" Text="DE12 3456 7890 1234 5678 90" FontSize="24" />
+                <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="15">
+                    <Label Text="Name:" FontSize="24" />
+                    <Entry x:Name="NameEntry" Text="Max Mustermann" FontSize="24" />
 
-                <Label Text="Bank:" FontSize="24" />
-                <Entry x:Name="BankEntry" Text="Musterbank AG" FontSize="24" />
+                    <Label Text="IBAN:" FontSize="24" />
+                    <Entry x:Name="IbanEntry" Text="DE12 3456 7890 1234 5678 90" FontSize="24" />
 
-                <Label Text="Adresse:" FontSize="24" />
-                <Entry x:Name="AdresseEntry" Text="Musterstraße 1, 12345 Musterstadt" FontSize="24" />
+                    <Label Text="Bank:" FontSize="24" />
+                    <Entry x:Name="BankEntry" Text="Musterbank AG" FontSize="24" />
 
-                <Label Text="Telefon:" FontSize="24" />
-                <Entry x:Name="TelefonEntry" Text="+49 123 456789" FontSize="24" Keyboard="Telephone" />
+                    <Label Text="Adresse:" FontSize="24" />
+                    <Entry x:Name="AdresseEntry" Text="Musterstraße 1, 12345 Musterstadt" FontSize="24" />
 
-                <Button Text="Speichern"  HorizontalOptions="Center" Margin="0,20,0,0" />
-            </VerticalStackLayout>
-        </Grid>
-    </ScrollView>
+                    <Label Text="Telefon:" FontSize="24" />
+                    <Entry x:Name="TelefonEntry" Text="+49 123 456789" FontSize="24" Keyboard="Telephone" />
+
+                    <Button Text="Speichern"  HorizontalOptions="Center" Margin="0,20,0,0" />
+                </VerticalStackLayout>
+            </Grid>
+        </ScrollView>
+    </VerticalStackLayout>
+
 </ContentPage>

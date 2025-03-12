@@ -57,9 +57,32 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\Icons\open_dokument.png" />
+	  <None Remove="Resources\Images\Icons\save.png" />
+	  <None Remove="Resources\Images\Icons\search.png" />
+	  <None Remove="Resources\Images\Icons\send_mail.png" />
+	  <None Remove="Resources\Images\Icons\trash_can.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Icons\save.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Icons\add_d.png" />
+	  <MauiImage Include="Resources\Images\Icons\search.png" />
+	  <MauiImage Include="Resources\Images\Icons\send_mail.png" />
+	  <MauiImage Include="Resources\Images\Icons\trash_can.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Icons\open_dokument.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -78,10 +101,6 @@
 	  <MauiXaml Update="PopUp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Resources\Images\Icons\" />
 	</ItemGroup>
 
 </Project>

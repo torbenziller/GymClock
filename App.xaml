@@ -5,9 +5,15 @@
              x:Class="GymClock.App">
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="Black">#000000</Color>
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="LightBackground">#E0E0E0</Color>
+            <Color x:Key="DarkBackground">#303030</Color>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

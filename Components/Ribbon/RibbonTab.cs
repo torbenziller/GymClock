@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GymClock.Components.Ribbon
 {
-    public class RibbonTab : VerticalStackLayout
+    public class RibbonTab : HorizontalStackLayout
     {
         public string Title { get; set; }
 

@@ -16,7 +16,7 @@ namespace GymClock.Components.Ribbon
         };
         private VerticalStackLayout tabContent = new VerticalStackLayout
         {
-            BackgroundColor = Colors.White,
+            BackgroundColor = Colors.Black,
             Padding = new Thickness(10),
             Spacing = 10
         };
