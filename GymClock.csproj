@@ -57,7 +57,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="AccUser.db" />
 	  <None Remove="Resources\Images\Icons\open_dokument.png" />
+	  <None Remove="Resources\Images\Icons\refresh.png" />
 	  <None Remove="Resources\Images\Icons\save.png" />
 	  <None Remove="Resources\Images\Icons\search.png" />
 	  <None Remove="Resources\Images\Icons\send_mail.png" />
@@ -65,6 +67,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Content Include="AccUser.db">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Icons\refresh.png" />
 	  <MauiImage Include="Resources\Images\Icons\save.png" />
 	</ItemGroup>
 
@@ -76,9 +85,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.1.66" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+		<PackageReference Include="SQLite" Version="3.13.0" />
+		<PackageReference Include="SQLitePCLRaw.core" Version="2.1.11" />
+		<PackageReference Include="System.Data.SQLite.Core" Version="1.0.119" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -96,6 +109,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Components\Pages\Settings.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\Pages\UserOverview.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="NPopUp.xaml">

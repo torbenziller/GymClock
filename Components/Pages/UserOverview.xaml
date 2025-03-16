@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GymClock.Components.Ribbon"
+             x:Class="GymClock.Components.Pages.UserOverview"
+             Title="UserOverview">
+
+    <ContentPage.Content>
+        <Grid Padding="20" RowSpacing="20" ColumnSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*" />
+                <ColumnDefinition Width="1.8*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Ribbon Bar -->
+            <local:RibbonBar x:Name="ribbonBar" Grid.ColumnSpan="2" />
+
+            <!-- Form Section -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="0" Spacing="12">
+                <Label Text="Add Person" FontSize="22" FontAttributes="Bold" TextColor="#E0E0E0" />
+
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="First Name" FontSize="18" TextColor="#B0B0B0" />
+                    <Entry x:Name="UserVornameEntry" Placeholder="Enter first name" FontSize="18"
+                           BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
+                           HeightRequest="45" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Last Name" FontSize="18" TextColor="#B0B0B0" />
+                    <Entry x:Name="UserNachnameEntry" Placeholder="Enter last name" FontSize="18"
+                           BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
+                           HeightRequest="45" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Username" FontSize="18" TextColor="#B0B0B0" />
+                    <Entry x:Name="UserUsernameEntry" Placeholder="Enter username" FontSize="18"
+                           BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
+                           HeightRequest="45" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Password" FontSize="18" TextColor="#B0B0B0" />
+                    <Entry x:Name="UserPasswortEntry" Placeholder="Enter password" FontSize="18" IsPassword="True"
+                           BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
+                           HeightRequest="45" />
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- List Section -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1" Spacing="12">
+                <Label Text="Benutzer Liste" FontSize="22" FontAttributes="Bold" TextColor="#E0E0E0" />
+                <Border StrokeThickness="1" Stroke="#505050" StrokeShape="RoundRectangle 8" Padding="5"
+                        BackgroundColor="#3D3D3D">
+                    <ScrollView VerticalOptions="FillAndExpand">
+                        <ListView x:Name="UserList" VerticalOptions="FillAndExpand" HasUnevenRows="True"
+                                  SelectionMode="Single" SeparatorVisibility="None"
+                                  BackgroundColor="#3D3D3D">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame Padding="12" Margin="5" CornerRadius="8" BorderColor="#505050"
+                                               HasShadow="True" BackgroundColor="#404040">
+                                            <HorizontalStackLayout Spacing="5">
+                                                <Label Text="{Binding Vorname}" FontSize="18" FontAttributes="Bold"
+                                                       TextColor="#E0E0E0" />
+                                                <Label Text="{Binding Nachname}" FontSize="18" TextColor="#E0E0E0" />
+                                            </HorizontalStackLayout>
+                                        </Frame>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollView>
+                </Border>
+            </VerticalStackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

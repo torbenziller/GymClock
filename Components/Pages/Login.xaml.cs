@@ -35,7 +35,7 @@ public partial class Login : ContentPage
     {
         // Hier deine Logik: Prüfung gegen DB, REST-API, Mock etc.
         // Zum Testen einfach:
-        return Task.FromResult(username == "tz" && password == " ");
+        return Task.FromResult(username == "tz" && password == "hi");
     }
 
 

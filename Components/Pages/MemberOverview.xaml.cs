@@ -9,6 +9,7 @@ public partial class MemberOverview : ContentPage
 	{
 		InitializeComponent();
         InitializeRibbonBar();
+        NavigationPage.SetHasNavigationBar(this, false);
     }
     /*--Ribbonbar Belegung--*/
     private void InitializeRibbonBar()

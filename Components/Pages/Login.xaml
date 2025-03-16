@@ -4,15 +4,16 @@
              x:Class="GymClock.Components.Pages.Login"
              Title="Login"
              WidthRequest="400"
-             HeightRequest="440">
+             HeightRequest="480">
     <VerticalStackLayout Padding="40" Spacing="20" VerticalOptions="Center">
 
-        <!-- Titel -->
-        <Label Text="Gymclock" 
-               FontSize="28" 
-               FontAttributes="Bold"
-               TextColor="White"
+        <!-- Bild oberhalb des Login-Formulars -->
+        <Image Source="loginicon.png"
+               HeightRequest="100"
                HorizontalOptions="Center" />
+
+        
+        
 
         <!-- Eingabefelder mit modernem Design -->
         <Frame BackgroundColor="#222" CornerRadius="10" HasShadow="False">
@@ -37,15 +38,23 @@
         </Frame>
 
         <!-- Login Button -->
-        <Button Text="Login" 
+        <Button Text="Login"
                 Clicked="OnLoginButtonClicked"
-                BackgroundColor="White"
-                TextColor="Black"
-                FontAttributes="Bold"
-                HeightRequest="50"
-                CornerRadius="10" />
+                CornerRadius="8"
+                Padding="12,6"
+                FontSize="18"
+                TextColor="White">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#B3FF9900" Offset="0.0" />
+                    <!-- Orange, milchig -->
+                    <GradientStop Color="#B3FFD700" Offset="1.0" />
+                    <!-- Gelb, milchig -->
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
-        <!-- Fehlermeldung -->
+        <!-- Meldung das dass Passwort falsch ist -->
         <Label x:Name="ErrorLabel" 
                TextColor="Red"
                FontSize="14"
