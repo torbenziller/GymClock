@@ -6,4 +6,9 @@ public partial class Settings : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    public async void SettingUserOverview(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new UserOverview());
+    }
 }
