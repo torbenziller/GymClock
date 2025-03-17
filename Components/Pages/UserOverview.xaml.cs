@@ -41,7 +41,7 @@ public partial class UserOverview : ContentPage
         {
             var loadedUsers = cAccUserDataAcess.LoadListAccUser();
 
-            // Collection leeren und neue Daten hinzufügen, statt zu ersetzen
+            // liste leeren und neue Daten hinzufügen, statt zu ersetzen
             user.Clear();
             foreach (var item in loadedUsers)
             {
@@ -56,7 +56,7 @@ public partial class UserOverview : ContentPage
         }
         catch (Exception ex)
         {
-            DisplayAlert("Fehler", $"Fehler beim Laden der Benutzerliste: {ex.Message}", "OK");
+            DisplayAlert("Fehler", $"Fehler beim Laden {ex.Message}", "OK");
         }
     }
 
@@ -102,7 +102,7 @@ public partial class UserOverview : ContentPage
         }
         catch (Exception ex)
         {
-            DisplayAlert("Fehler", $"Fehler beim Hinzufügen des Benutzers: {ex.Message}", "OK");
+            DisplayAlert("Fehler", $"Fehler beim Hinzufügen {ex.Message}", "OK");
         }
     }
 

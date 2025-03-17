@@ -25,28 +25,28 @@
 
                 <VerticalStackLayout Spacing="8">
                     <Label Text="Vorname" FontSize="18" TextColor="#B0B0B0" />
-                    <Entry x:Name="UserVornameEntry" Placeholder="Enter first name" FontSize="18"
+                    <Entry x:Name="UserVornameEntry"  FontSize="18"
                            BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
                            HeightRequest="45" />
                 </VerticalStackLayout>
 
                 <VerticalStackLayout Spacing="8">
-                    <Label Text="Last Name" FontSize="18" TextColor="#B0B0B0" />
-                    <Entry x:Name="UserNachnameEntry" Placeholder="Enter last name" FontSize="18"
+                    <Label Text="Nachname" FontSize="18" TextColor="#B0B0B0" />
+                    <Entry x:Name="UserNachnameEntry" FontSize="18"
                            BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
                            HeightRequest="45" />
                 </VerticalStackLayout>
 
                 <VerticalStackLayout Spacing="8">
                     <Label Text="Username" FontSize="18" TextColor="#B0B0B0" />
-                    <Entry x:Name="UserUsernameEntry" Placeholder="Enter username" FontSize="18"
+                    <Entry x:Name="UserUsernameEntry"  FontSize="18"
                            BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
                            HeightRequest="45" />
                 </VerticalStackLayout>
 
                 <VerticalStackLayout Spacing="8">
                     <Label Text="Password" FontSize="18" TextColor="#B0B0B0" />
-                    <Entry x:Name="UserPasswortEntry" Placeholder="Enter password" FontSize="18" IsPassword="True"
+                    <Entry x:Name="UserPasswortEntry"  FontSize="18" IsPassword="True"
                            BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
                            HeightRequest="45" />
                 </VerticalStackLayout>
