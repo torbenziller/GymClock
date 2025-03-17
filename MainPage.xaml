@@ -106,7 +106,7 @@
                                    CornerRadius="10"
                                    HasShadow="True">
                                 <VerticalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
-                                    <Label Text="Neue Mitglieder"
+                                    <Label Text="Neue Mitglieder (seit Jahresbeginn)"
                                            FontSize="16"
                                            HorizontalOptions="Center"
                                            TextColor="{AppThemeBinding Light=#6c757d, Dark=#adb5bd}"/>
@@ -160,6 +160,7 @@
                                     FontAttributes="Bold"
                                     CornerRadius="10"
                                     Padding="10"
+                                    
                                     />
 
                             <Button Grid.Row="1" Grid.Column="0"
@@ -172,7 +173,7 @@
                                     />
 
                             <Button Grid.Row="1" Grid.Column="1"
-                                    Text="Tagesstatistik"
+                                    Text="Test1"
                                     BackgroundColor="#f39c12"
                                     TextColor="White"
                                     FontAttributes="Bold"

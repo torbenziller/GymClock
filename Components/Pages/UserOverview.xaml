@@ -16,16 +16,14 @@
                 <ColumnDefinition Width="1.8*" />
             </Grid.ColumnDefinitions>
 
-            <!-- Ribbon Bar -->
             <local:RibbonBar x:Name="ribbonBar" Grid.ColumnSpan="2" />
 
-            <!-- Form Section -->
             <VerticalStackLayout Grid.Row="1" Grid.Column="0" Spacing="12">
                 <Label Text="Benutzer Hinzufügen" FontSize="22" FontAttributes="Bold" TextColor="#E0E0E0" />
 
                 <VerticalStackLayout Spacing="8">
                     <Label Text="Vorname" FontSize="18" TextColor="#B0B0B0" />
-                    <Entry x:Name="UserVornameEntry"  FontSize="18"
+                    <Entry x:Name="UserVornameEntry" FontSize="18"
                            BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
                            HeightRequest="45" />
                 </VerticalStackLayout>
@@ -39,27 +37,32 @@
 
                 <VerticalStackLayout Spacing="8">
                     <Label Text="Username" FontSize="18" TextColor="#B0B0B0" />
-                    <Entry x:Name="UserUsernameEntry"  FontSize="18"
+                    <Entry x:Name="UserUsernameEntry" FontSize="18"
                            BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
                            HeightRequest="45" />
                 </VerticalStackLayout>
 
                 <VerticalStackLayout Spacing="8">
                     <Label Text="Password" FontSize="18" TextColor="#B0B0B0" />
-                    <Entry x:Name="UserPasswortEntry"  FontSize="18" IsPassword="True"
+                    <Entry x:Name="UserPasswortEntry" FontSize="18" IsPassword="True"
                            BackgroundColor="#3D3D3D" PlaceholderColor="#808080" TextColor="#E0E0E0"
                            HeightRequest="45" />
                 </VerticalStackLayout>
             </VerticalStackLayout>
 
-            <!-- List Section -->
-            <VerticalStackLayout Grid.Row="1" Grid.Column="1" Spacing="12">
-                <Label Text="Benutzer Liste" FontSize="22" FontAttributes="Bold" TextColor="#E0E0E0" />
-                <Border StrokeThickness="1" Stroke="#505050" StrokeShape="RoundRectangle 8" Padding="5"
-                        BackgroundColor="#3D3D3D">
-                    <ScrollView VerticalOptions="FillAndExpand">
-                        <ListView x:Name="UserList" VerticalOptions="FillAndExpand" HasUnevenRows="True"
-                                  SelectionMode="Single" SeparatorVisibility="None"
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <VerticalStackLayout Grid.Row="0" Spacing="12">
+                    <Label Text="Benutzer Liste" FontSize="22" FontAttributes="Bold" TextColor="#E0E0E0" />
+                </VerticalStackLayout>
+                <ScrollView Grid.Row="1">
+                    <Border StrokeThickness="1" Stroke="#505050" StrokeShape="RoundRectangle 8" Padding="5"
+                            BackgroundColor="#3D3D3D">
+                        <ListView x:Name="UserList" HasUnevenRows="True"
+                                  SelectionMode="Single" SeparatorVisibility="None" ItemSelected="OnUserSelected"
                                   BackgroundColor="#3D3D3D">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
@@ -76,9 +79,9 @@
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-                    </ScrollView>
-                </Border>
-            </VerticalStackLayout>
+                    </Border>
+                </ScrollView>
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
